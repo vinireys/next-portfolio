@@ -12,25 +12,45 @@ const Contatos =() => {
 					<li className="md:text-xl">
 						<span className="font-bold">E-mail</span>
 						<div className="flex gap-1 md:gap-3 items-center">
-							<a href="maito:huriel-lopes@outlook.com" className="text-sm md:text-lg text-slate-300 underline truncate">huriel-lopes@outlook.com</a>
+							<a 
+							  href="maito:huriel-lopes@outlook.com" 
+						 	 className="text-sm md:text-lg text-slate-300 underline truncate"
+							>	
+								huriel-lopes@outlook.com
+							</a>
 						</div>
 					</li>
-					<li>
+					<li className="md:text-xl">
 						<span className="font-bold">LinkedIn</span>
-						<div>
-							<a href="https://www.linkedin.com/in/huri3l">https://www.linkedin.com/in/huri3l</a>
+						<div className="flex gap-1 md:gap-3 items-center">
+							<a 	
+							  className="text-sm md:text-lg text-slate-300 underline truncate"
+						      href="https://www.linkedin.com/in/huri3l"
+							>
+								https://www.linkedin.com/in/huri3
+							</a>
 						</div>
 					</li>
-					<li>
+					<li className="md:text-xl">
 						<span className="font-bold">GitHub</span>
-						<div>
-							<a href="https://github.com/huri3l">huriel-lopes@outlook.com</a>
+						<div className="flex gap-1 md:gap-3 items-center">
+						<a 	
+							  className="text-sm md:text-lg text-slate-300 underline truncate"
+						      href="https://www.linkedin.com/in/huri3l"
+							>
+								https://github.com/huri3
+							</a>
 						</div>
 					</li>
-					<li>
-						<span>YouTube</span>
-						<div>
-							<a href="https://www.youtube.com/Huriel">https://www.youtube.com/Huriel</a>
+					<li className="md:text-xl">
+						<span className="font-bold">YouTube</span>
+						<div className="flex gap-1 md:gap-3 items-center">
+						<a 	
+							  className="text-sm md:text-lg text-slate-300 underline truncate"
+						      href="https://www.linkedin.com/in/huri3l"
+							>
+								https://www.youtube.com/Huriel
+							</a>
 						</div>
 					</li>
 				</ul>
