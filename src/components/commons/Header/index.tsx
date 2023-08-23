@@ -36,7 +36,7 @@ export const Header = () => {
 				{/*<Link href="/">Portfolio</Link>*/}
 				<Link href="/contatos">Entre em contato</Link>
 			</nav>
-			<Menu />
+			<Menu isVisible={isMenuOpen} onClose={closeMenu}/>
 		</header>
 	);
 };	 
