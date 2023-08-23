@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export const MenuIcon = (props: SVGProps<SVGSVGElement>) => {
+export const MenuCloseIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       {...props}
