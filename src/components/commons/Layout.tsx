@@ -6,14 +6,14 @@ interface LayoutProps{
 	children: ReactNode
 }
 
-const jetBrains_Mono = JetBrains_Mono({
+const jetbrains_mono = JetBrains_Mono({
 	subsets: ['latin'],
 	weight: '400',
-});
+})
 
 export const Layout = ({children}: LayoutProps) => {
   return (
-		<div className="jetbrains_mono.classNeme">
+		<div className={jetbrains_mono.className}>
 		 <Header />
 		 {children}
 		</div>

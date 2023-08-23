@@ -17,8 +17,8 @@ export const Header = () => {
 				</Link>
 				<nav className="hidden md:flex items-center gap-10 text-md">
 					<Link href="/">Sobre mim</Link>
-					  {/*<Link href="/">Portfolio</Link>*/}
-				<Link href="/contatos">Entre em contato</Link>
+				    {/*<Link href="/">Portfolio</Link>*/}
+				   <Link href="/contatos">Entre em contato</Link>
 			</nav>
 		</header>
 	);

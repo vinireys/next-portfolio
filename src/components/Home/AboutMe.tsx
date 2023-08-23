@@ -13,15 +13,15 @@ export const AboutMe = () => {
       <div className="text-white flex flex-col items-center xl:items-start gap-4 w-full xl:w-120">
         <h1 className="text-3xl sm:text-7xl xl:leading-[5rem]">
           Prazer, sou &nbsp;
-          <span className="font-bold">Huriel</span>
+          <strong className="font-bold">Huriel</strong>
         </h1>
         <div className="mb-12">
             <h2 className={`${roboto.className} mb-12`}>
               Sou um desenvolvedor Front-end apaixonado por criar interfaces e ajudar outros devs!
             </h2>
-          <Link
-           href="/contatos"
-           className="p-3 bg-h-gray-500 w-xlrounded-lg transition-all hover:bg-opacity-80"
+          <Link 
+          href="/contatos" 
+          className="p-3 bg-h-gray-500 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80"
           >
             Converse comigo!
           </Link>
@@ -57,13 +57,13 @@ export const AboutMe = () => {
         <Image 
           src="https://avatars.githubusercontent.com/u/61247833?v=4"
           alt="Foto de Perfil de Huriel, Homen caucasiano, cabelo castanho e um sorriso enorme no rosto"
+          unoptimized
           width={500}
           height={500}
-          unoptimized
           className="rounded-full"
         />
         <p className="p-4 w-fit text-base leading-tinght bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
-          <span className="text-4xl">2+</span>
+          <strong className="text-4xl">2+</strong>
           <br />
           anos de experiencia
         </p>

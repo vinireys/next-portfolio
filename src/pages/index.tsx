@@ -1,4 +1,4 @@
-import { AboutMe  } from "./components/Home/AboutMe";
+import { AboutMe } from "../components/Home/AboutMe";
 import Head from "next/head";
 import { Roboto } from 'next/font/google';
 
