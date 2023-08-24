@@ -19,7 +19,7 @@ const Contatos =() => {
 							>	
 								huriel-lopes@outlook.com
 							</a>
-							<CopyButton />
+							<CopyButton textToCopy="huriel-lopes@outlook.com" />
 						</div>
 					</li>
 					<li className="md:text-xl">
