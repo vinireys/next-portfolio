@@ -7,10 +7,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'avatars.githubsercontent.com',
         port: '',
-        pathname: '/u/**'
-      }
-    ]
-  }
-}
+        pathname: '/u/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
+  },
+};
 
 module.exports = nextConfig
