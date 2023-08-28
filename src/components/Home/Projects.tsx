@@ -13,8 +13,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
 
       <ul className="flex flex-wrap gap-16 justify-center .xl/:justify-center xl:justify-start">
         { projects.map (({slug, name, image}, index) => (
-          <Link href={`/projects/${slug}`} key={name + index}>
-            <li className="text-md relative">
+            <li className="text-md relative" key={name + index}>
               <Image 
                 src={image.url} 
                 alt={image.alt} 
@@ -27,7 +26,6 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 <span>{index + 1}</span>
               </div>
             </li>
-          </Link>
         ))}
       </ul>
     </article>
