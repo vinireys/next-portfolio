@@ -24,7 +24,7 @@ const Home = () => {
       slug: 'userdash',
       name: 'UserDash',
       image: {
-        url: 'https://i.imgur.com/biViAwow.png',
+        url: 'https://i.imgur.com/Fdl3Lnp.png',
         alt: 'UserDash, dashboard de usuarios. Pgina inicial contendo uma opçao'
       },
     },

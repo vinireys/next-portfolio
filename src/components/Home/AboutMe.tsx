@@ -21,7 +21,7 @@ export const AboutMe = () => {
             </h2>
           <Link 
           href="/contatos" 
-          className="p-3 bg-h-gray-500 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80"
+          className="p-3 bg-gray-500 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80"
           >
             Converse comigo!
           </Link>
@@ -62,7 +62,7 @@ export const AboutMe = () => {
           height={500}
           className="rounded-full"
         />
-        <p className="p-4 w-fit text-base leading-tinght bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
+        <p className="p-4 w-fit text-base leading-tinght bg-cyan-300 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
           <strong className="text-4xl">2+</strong>
           <br />
           anos de experiencia
