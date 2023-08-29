@@ -3,6 +3,24 @@ export interface Image {
   alt: string;
 }
 
+export interface Tech {
+  tech: string;
+  color: string;
+  bgcolor: string;
+}
+
+export interface AboutMe {
+  title: {
+    default: string;
+    bold: string;
+  };
+  description: string;
+  contact: {
+    link: string;
+    label: string;
+  };
+}
+
 export interface Project {
   slug: string;
   name: string;
