@@ -8,7 +8,7 @@ export const CopyIncon = ({title, ...props}: CopyInconProps) => {
   return (
     <svg
       {...props}
-      strokeWidth='0'
+      strokeWidth="0"
       viewBox='0 0 24 24'
       height='1em'
       width='1em'
