@@ -2,7 +2,7 @@ import { AboutMe } from "../components/Home/AboutMe";
 import Head from "next/head";
 import { Projects } from "../components/Home/Projects";
 
-const Home = () => {
+const Home = ({home}: any) => {
   const projects = [
     {
       slug: 'natura-whitelabel',
@@ -37,6 +37,9 @@ const Home = () => {
       }
     }
   ];
+
+  console.log(home);
+  
   return (
     <>
       <Head>
@@ -53,5 +56,16 @@ const Home = () => {
     </>
   );
 };
+
+export const getSaticProps =async () => {
+  const res = await fetch(
+    'https://gist.githubusercontent.com/huri3l/b2d6a36f169dfe3fcd11a5dac89d83cc/raw/ad2cd1cd3c858ffd6fd70af5c80bb6bf98ee2cdf/home.json',
+  );
+  const home = await res.json();
+
+  return{
+    props: { home },
+  }
+}
 
 export default Home;
