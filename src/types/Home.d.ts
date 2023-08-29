@@ -19,6 +19,14 @@ export interface AboutMe {
     link: string;
     label: string;
   };
+  techs: Tech[];
+  pfp: {
+    image: Image;
+    experience: {
+      default: string;
+      bold: string;
+    }
+  }
 }
 
 export interface Project {
