@@ -1,45 +1,19 @@
+import { GetStaticProps } from "next";
 import { AboutMe } from "../components/Home/AboutMe";
-import Head from "next/head";
 import { Projects } from "../components/Home/Projects";
+import { Project, AboutMe as TAboutMe } from "../types/Home";
+import Head from "next/head";
 
-const Home = ({home}: any) => {
-  const projects = [
-    {
-      slug: 'natura-whitelabel',
-      name: 'Natura Whitelabel',
-      image: {
-        url: 'https://i.imgur.com/BSphXgc.png',
-        alt: 'Pagina Inicial do Site da Natura Brasil',
-      },
-    },
-    {
-      slug: 'blobg',
-      name: 'Blob.g',
-      image: {
-        url: 'https://i.imgur.com/Fdl3Lnp.png',
-        alt: 'Blob.g, noticias do mundo dos codigos',
-      },
-    },
-    {
-      slug: 'userdash',
-      name: 'UserDash',
-      image: {
-        url: 'https://i.imgur.com/Fdl3Lnp.png',
-        alt: 'UserDash, dashboard de usuarios. Pgina inicial contendo uma opçao'
-      },
-    },
-    {
-      slug: 'videoteca',
-      name: 'Videoteca',
-      image: {
-        url: 'https://i.imgur.com/wuTKxK9.png',
-        alt: 'Videoteca, aplicativo para salvar videos',
-      }
-    }
-  ];
+interface HomeProps{
+  home: {
+    aboutMe: TAboutMe;
+    projects: Project[]
+  };
+};
 
-  console.log(home);
-  
+const Home = ({home}: HomeProps) => {
+  const { projects } = home
+
   return (
     <>
       <Head>
@@ -64,16 +38,14 @@ const loadHome = async () => {
   const home = await res.json();
 
   return home;
-}
+};
 
-export const getSaticProps =async () => {
+export const getSaticProps: GetStaticProps<HomeProps> = async () => {
  const home = await loadHome();
-
- console.log(home);                             
 
   return{
     props: { home },
-  }
-}
+  };
+};
 
 export default Home;
