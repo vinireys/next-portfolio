@@ -29,7 +29,7 @@ export interface AboutMe {
   }
 };
 
-export interface Projet {
+export interface Project {
   slug: string;
   name: string;
   image: Image;

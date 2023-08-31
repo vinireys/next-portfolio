@@ -1,6 +1,5 @@
 import { Project } from "@/src/types/Home";
 import Image from "next/image";
-import Link from "next/link";
 
 interface ProjectsProps {
   projects: Project[];

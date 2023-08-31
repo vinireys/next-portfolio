@@ -1,52 +1,18 @@
 import { AboutMe } from "../components/Home/AboutMe";
 import Head from "next/head";
 import { Projects } from "../components/Home/Projects";
-import { Projet, AboutMe as TAboutMe} from "../types/Home";
+import { Project, AboutMe as TAboutMe} from "../types/Home";
+import { GetStaticProps } from "next";
 
 interface HomeProps {
   home: {
     aboutMe: TAboutMe;
-    project: Projet[],
+    projects: Project[],
   }
 }
 
-const Home = ({ home }: any) => {
-  const projects = [
-    {
-      slug: 'natura-whitelabel',
-      name: 'Natura Whitelabel',
-      image: {
-        url: 'https://i.imgur.com/BSphXgc.png',
-        alt: 'Pagina Inicial do Site da Natura Brasil',
-      },
-    },
-    {
-      slug: 'blobg',
-      name: 'Blob.g',
-      image: {
-        url: 'https://i.imgur.com/Fdl3Lnp.png',
-        alt: 'Blob.g, noticias do mundo dos codigos',
-      },
-    },
-    {
-      slug: 'userdash',
-      name: 'UserDash',
-      image: {
-        url: 'https://i.imgur.com/Fdl3Lnp.png',
-        alt: 'UserDash, dashboard de usuarios. Pgina inicial contendo uma opçao'
-      },
-    },
-    {
-      slug: 'videoteca',
-      name: 'Videoteca',
-      image: {
-        url: 'https://i.imgur.com/wuTKxK9.png',
-        alt: 'Videoteca, aplicativo para salvar videos',
-      }
-    }
-  ];
-
- // console.log(home);
+const Home = ({ home }: HomeProps) => {
+  const { projects } = home;
 
   return (
     <>
@@ -74,7 +40,7 @@ const loadHome = async () => {
   return home;
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
  const home = await loadHome();
 
   return {
