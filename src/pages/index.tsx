@@ -1,6 +1,14 @@
 import { AboutMe } from "../components/Home/AboutMe";
 import Head from "next/head";
 import { Projects } from "../components/Home/Projects";
+import { Projet, AboutMe as TAboutMe} from "../types/Home";
+
+interface HomeProps {
+  home: {
+    aboutMe: TAboutMe;
+    project: Projet[],
+  }
+}
 
 const Home = ({ home }: any) => {
   const projects = [
