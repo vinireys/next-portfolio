@@ -1,18 +1,44 @@
-import { GetStaticProps } from "next";
 import { AboutMe } from "../components/Home/AboutMe";
-import { Projects } from "../components/Home/Projects";
-import { Project, AboutMe as TAboutMe } from "../types/Home";
 import Head from "next/head";
+import { Projects } from "../components/Home/Projects";
 
-interface HomeProps{
-  home: {
-    aboutMe: TAboutMe;
-    projects: Project[]
-  };
-};
+const Home = ({ home }: any) => {
+  const projects = [
+    {
+      slug: 'natura-whitelabel',
+      name: 'Natura Whitelabel',
+      image: {
+        url: 'https://i.imgur.com/BSphXgc.png',
+        alt: 'Pagina Inicial do Site da Natura Brasil',
+      },
+    },
+    {
+      slug: 'blobg',
+      name: 'Blob.g',
+      image: {
+        url: 'https://i.imgur.com/Fdl3Lnp.png',
+        alt: 'Blob.g, noticias do mundo dos codigos',
+      },
+    },
+    {
+      slug: 'userdash',
+      name: 'UserDash',
+      image: {
+        url: 'https://i.imgur.com/Fdl3Lnp.png',
+        alt: 'UserDash, dashboard de usuarios. Pgina inicial contendo uma opçao'
+      },
+    },
+    {
+      slug: 'videoteca',
+      name: 'Videoteca',
+      image: {
+        url: 'https://i.imgur.com/wuTKxK9.png',
+        alt: 'Videoteca, aplicativo para salvar videos',
+      }
+    }
+  ];
 
-const Home = ({home}: HomeProps) => {
-  const { projects } = home
+ // console.log(home);
 
   return (
     <>
@@ -33,19 +59,19 @@ const Home = ({home}: HomeProps) => {
 
 const loadHome = async () => {
   const res = await fetch(
-    'https://gist.githubusercontent.com/huri3l/b2d6a36f169dfe3fcd11a5dac89d83cc/raw/ad2cd1cd3c858ffd6fd70af5c80bb6bf98ee2cdf/home.json',
+    'https://gist.githubusercontent.com/huri3l/b2d6a36f169dfe3fcd11a5dac89d83cc/raw/ad2cd1cd3c858ffd6fd70af5c80bb6bf98ee2cdf/home.json'
   );
   const home = await res.json();
 
   return home;
-};
+}
 
-export const getSaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps = async () => {
  const home = await loadHome();
 
-  return{
+  return {
     props: { home },
-  };
+  }
 };
 
 export default Home;

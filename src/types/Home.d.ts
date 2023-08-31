@@ -10,14 +10,14 @@ export interface Tech {
 }
 
 export interface AboutMe {
-  title: {
+  title: { 
     default: string;
     bold: string;
   };
   description: string;
   contact: {
     link: string;
-    label: string;
+    label:string;
   };
   techs: Tech[];
   pfp: {
@@ -27,9 +27,9 @@ export interface AboutMe {
       bold: string;
     }
   }
-}
+};
 
-export interface Project {
+export interface Projet {
   slug: string;
   name: string;
   image: Image;
