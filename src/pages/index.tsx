@@ -12,7 +12,7 @@ interface HomeProps {
 }
 
 const Home = ({ home }: HomeProps) => {
-  const { projects } = home;
+  const { projects, aboutMe } = home;
 
   return (
     <>
@@ -24,7 +24,7 @@ const Home = ({ home }: HomeProps) => {
         />
       </Head>
       <div className="py-12 px-6 md:px-32 espace-y-10 md:space-y-28">
-        <AboutMe />
+        <AboutMe aboutMe={aboutMe}/>
         <Projects projects={projects} />
      </div>
     </>
